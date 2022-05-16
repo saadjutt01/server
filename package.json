@@ -2,7 +2,7 @@
   "name": "server",
   "version": "0.0.76",
   "description": "NodeJS wrapper for calling the SAS binary executable",
-  "repository": "https://github.com/sasjs/server",
+  "repository": "https://github.com/saadjutt01/server",
   "scripts": {
     "server": "npm run server:prepare && npm run server:start",
     "server:prepare": "cd web && npm ci && npm run build && cd ../api && npm ci && npm run build && cd ..",
@@ -27,7 +27,7 @@
   },
   "plugins": [
     "@semantic-release/commit-analyzer",
-    "@semantic-release/release-notes-generator",
+    "@semantic-release/release-notes-genera tor",
     [
       "@semantic-release/github",
       {
