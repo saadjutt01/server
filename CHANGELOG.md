@@ -1,3 +1,10 @@
+## [0.1.8](https://github.com/saadjutt01/server/compare/v0.1.7...v0.1.8) (2022-05-16)
+
+
+### Bug Fixes
+
+* changelog location updated ([ee5fe22](https://github.com/saadjutt01/server/commit/ee5fe22ec2a141fbddb1610277ea8fad195702b2))
+
 # Changelog
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
