@@ -26,6 +26,12 @@
     ]
   },
   "plugins": [
+    [
+      "@semantic-release/npm",
+      {
+        "npmPublish": false
+      }
+    ],
     "@semantic-release/commit-analyzer",
     "@semantic-release/release-notes-genera tor",
     [
