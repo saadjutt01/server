@@ -42,6 +42,9 @@ jobs:
       #   env:
       #     CI: true
 
+      - name: Build Executables
+        run: mkdir executables
+
       - name: Compress Executables
         working-directory: ./executables
         run: |
