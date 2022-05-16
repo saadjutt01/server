@@ -42,6 +42,13 @@ jobs:
         env:
           CI: true
 
+      - name: Compress Executables
+        working-directory: ./executables
+        run: |
+          zip linux.zip api-linux
+          zip macos.zip api-macos
+          zip windows.zip api-win.exe
+
       - name: NPM Install
         run: |
           npm i
