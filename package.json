@@ -32,8 +32,6 @@
         "npmPublish": false
       }
     ],
-    "@semantic-release/commit-analyzer",
-    "@semantic-release/release-notes-genera tor",
     [
       "@semantic-release/github",
       {

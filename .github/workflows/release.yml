@@ -60,11 +60,14 @@ jobs:
       #       ./executables/macos.zip
       #       ./executables/windows.zip
 
-      - name: Semantic Release
-        uses: cycjimmy/semantic-release-action@v3
-        # with:
-        # extra_plugins: |
-        #   @semantic-release/changelog@3.0.0
-        #   @semantic-release/git
-        env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+      - name: Env-Variables
+        run: export GITHUB_TOKEN=${{ secrets.GH_TOKEN }}
+
+      - name: NPM Install
+        run: |
+          npm i
+          npm i -g semantic-release
+
+      - name: Create Release
+        run: |
+          semantic-release
