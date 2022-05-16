@@ -1,3 +1,10 @@
+## [0.1.9](https://github.com/saadjutt01/server/compare/v0.1.8...v0.1.9) (2022-05-16)
+
+
+### Bug Fixes
+
+* removed redundant files for changelog ([1b0378a](https://github.com/saadjutt01/server/commit/1b0378a1b6cb2123e5921c4780cd2f840d9efa40))
+
 ## [0.1.8](https://github.com/saadjutt01/server/compare/v0.1.7...v0.1.8) (2022-05-16)
 
 
