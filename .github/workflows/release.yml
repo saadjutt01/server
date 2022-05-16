@@ -17,48 +17,30 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      # - name: Use Node.js ${{ matrix.node-version }}
-      #   uses: actions/setup-node@v2
-      #   with:
-      #     node-version: ${{ matrix.node-version }}
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node-version }}
 
-      # - name: Install Dependencies WEB
-      #   working-directory: ./web
-      #   run: npm ci
+      - name: Install Dependencies WEB
+        working-directory: ./web
+        run: npm ci
 
-      # - name: Build WEB
-      #   working-directory: ./web
-      #   run: npm run build
-      #   env:
-      #     CI: true
+      - name: Build WEB
+        working-directory: ./web
+        run: npm run build
+        env:
+          CI: true
 
-      # - name: Install Dependencies API
-      #   working-directory: ./api
-      #   run: npm ci
-
-      # - name: Build Executables
-      #   working-directory: ./api
-      #   run: npm run exe
-      #   env:
-      #     CI: true
+      - name: Install Dependencies API
+        working-directory: ./api
+        run: npm ci
 
       - name: Build Executables
-        run: mkdir executables
-
-      - name: Compress Executables
-        working-directory: ./executables
-        run: |
-          touch api-linux && zip linux.zip api-linux
-          touch api-macos && zip macos.zip api-macos
-          touch api-win.exe && zip windows.zip api-win.exe
-
-      # - name: Release
-      #   uses: softprops/action-gh-release@v1
-      #   with:
-      #     files: |
-      #       ./executables/linux.zip
-      #       ./executables/macos.zip
-      #       ./executables/windows.zip
+        working-directory: ./api
+        run: npm run exe
+        env:
+          CI: true
 
       - name: NPM Install
         run: |
