@@ -60,9 +60,6 @@ jobs:
       #       ./executables/macos.zip
       #       ./executables/windows.zip
 
-      - name: Env-Variables
-        run: export GITHUB_TOKEN=${{ secrets.GH_TOKEN }}
-
       - name: NPM Install
         run: |
           npm i
@@ -70,4 +67,4 @@ jobs:
 
       - name: Create Release
         run: |
-          semantic-release
+          GITHUB_TOKEN=${{ secrets.GH_TOKEN }} semantic-release
