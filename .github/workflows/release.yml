@@ -49,7 +49,7 @@ jobs:
           zip macos.zip api-macos
           zip windows.zip api-win.exe
 
-      - name: NPM Install
+      - name: Install Semantic Release and plugins
         run: |
           npm i
           npm i -g semantic-release
