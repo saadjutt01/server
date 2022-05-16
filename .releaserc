@@ -27,7 +27,7 @@
     [
       "@semantic-release/exec",
       {
-        "publishCmd": "npm run release"
+        "publishCmd": "npx standard-version"
       }
     ]
   ]
