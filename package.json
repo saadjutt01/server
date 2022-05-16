@@ -16,7 +16,36 @@
     "lint:fix": "npm run lint-api:fix && npm run lint-web:fix"
   },
   "devDependencies": {
+    "@semantic-release/github": "^8.0.4",
     "prettier": "^2.3.1",
     "standard-version": "^9.3.2"
-  }
+  },
+  "release": {
+    "branches": [
+      "main"
+    ]
+  },
+  "plugins": [
+    "@semantic-release/commit-analyzer",
+    "@semantic-release/release-notes-generator",
+    [
+      "@semantic-release/github",
+      {
+        "assets": [
+          {
+            "path": "./executables/linux.zip",
+            "label": "linux distribution"
+          },
+          {
+            "path": "./executables/macos.zip",
+            "label": "macos distribution"
+          },
+          {
+            "path": "./executables/windows.zip",
+            "label": "windows distribution"
+          }
+        ]
+      }
+    ]
+  ]
 }
